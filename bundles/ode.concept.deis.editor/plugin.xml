@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+    Copyright (c) 2018, 2020 DEIS Project
+    Copyright (c) 2020 PANORAMA Project
+   
+    All rights reserved. This program and the accompanying materials
+    are made available under the MIT License, available at: 
+    https://opensource.org/licenses/MIT
+   
+    SPDX-License-Identifier: MIT
+ -->
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.base.presentation.BaseModelWizardID"
+            name="%_UI_BaseModelWizard_label"
+            class="ode.base.presentation.BaseModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BaseModelFile.gif">
+         <description>%_UI_BaseModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.base.presentation.BaseEditorID"
+            name="%_UI_BaseEditor_label"
+            icon="icons/full/obj16/BaseModelFile.gif"
+            extensions="base"
+            class="ode.base.presentation.BaseEditor"
+            contributorClass="ode.base.presentation.BaseActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.artifact.presentation.Artifact_ModelWizardID"
+            name="%_UI_Artifact_ModelWizard_label"
+            class="ode.artifact.presentation.Artifact_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Artifact_ModelFile.gif">
+         <description>%_UI_Artifact_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.artifact.presentation.Artifact_EditorID"
+            name="%_UI_Artifact_Editor_label"
+            icon="icons/full/obj16/Artifact_ModelFile.gif"
+            extensions="artifact_"
+            class="ode.artifact.presentation.Artifact_Editor"
+            contributorClass="ode.artifact.presentation.Artifact_ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.terminology.presentation.Terminology_ModelWizardID"
+            name="%_UI_Terminology_ModelWizard_label"
+            class="ode.terminology.presentation.Terminology_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Terminology_ModelFile.gif">
+         <description>%_UI_Terminology_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.terminology.presentation.Terminology_EditorID"
+            name="%_UI_Terminology_Editor_label"
+            icon="icons/full/obj16/Terminology_ModelFile.gif"
+            extensions="terminology_"
+            class="ode.terminology.presentation.Terminology_Editor"
+            contributorClass="ode.terminology.presentation.Terminology_ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.argumentation.presentation.ArgumentationModelWizardID"
+            name="%_UI_ArgumentationModelWizard_label"
+            class="ode.argumentation.presentation.ArgumentationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ArgumentationModelFile.gif">
+         <description>%_UI_ArgumentationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.argumentation.presentation.ArgumentationEditorID"
+            name="%_UI_ArgumentationEditor_label"
+            icon="icons/full/obj16/ArgumentationModelFile.gif"
+            extensions="argumentation"
+            class="ode.argumentation.presentation.ArgumentationEditor"
+            contributorClass="ode.argumentation.presentation.ArgumentationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.assuranceCase.presentation.AssuranceCase_ModelWizardID"
+            name="%_UI_AssuranceCase_ModelWizard_label"
+            class="ode.assuranceCase.presentation.AssuranceCase_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/AssuranceCase_ModelFile.gif">
+         <description>%_UI_AssuranceCase_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.assuranceCase.presentation.AssuranceCase_EditorID"
+            name="%_UI_AssuranceCase_Editor_label"
+            icon="icons/full/obj16/AssuranceCase_ModelFile.gif"
+            extensions="assurancecase_"
+            class="ode.assuranceCase.presentation.AssuranceCase_Editor"
+            contributorClass="ode.assuranceCase.presentation.AssuranceCase_ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.odeBase.presentation.OdeBaseModelWizardID"
+            name="%_UI_OdeBaseModelWizard_label"
+            class="ode.odeBase.presentation.OdeBaseModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/OdeBaseModelFile.gif">
+         <description>%_UI_OdeBaseModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.odeBase.presentation.OdeBaseEditorID"
+            name="%_UI_OdeBaseEditor_label"
+            icon="icons/full/obj16/OdeBaseModelFile.gif"
+            extensions="odebase"
+            class="ode.odeBase.presentation.OdeBaseEditor"
+            contributorClass="ode.odeBase.presentation.OdeBaseActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.integration.presentation.IntegrationModelWizardID"
+            name="%_UI_IntegrationModelWizard_label"
+            class="ode.integration.presentation.IntegrationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IntegrationModelFile.gif">
+         <description>%_UI_IntegrationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.integration.presentation.IntegrationEditorID"
+            name="%_UI_IntegrationEditor_label"
+            icon="icons/full/obj16/IntegrationModelFile.gif"
+            extensions="integration"
+            class="ode.integration.presentation.IntegrationEditor"
+            contributorClass="ode.integration.presentation.IntegrationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.failureLogic.presentation.FailureLogic_ModelWizardID"
+            name="%_UI_FailureLogic_ModelWizard_label"
+            class="ode.failureLogic.presentation.FailureLogic_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/FailureLogic_ModelFile.gif">
+         <description>%_UI_FailureLogic_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.failureLogic.presentation.FailureLogic_EditorID"
+            name="%_UI_FailureLogic_Editor_label"
+            icon="icons/full/obj16/FailureLogic_ModelFile.gif"
+            extensions="failurelogic_"
+            class="ode.failureLogic.presentation.FailureLogic_Editor"
+            contributorClass="ode.failureLogic.presentation.FailureLogic_ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.dependability.presentation.Dependability_ModelWizardID"
+            name="%_UI_Dependability_ModelWizard_label"
+            class="ode.dependability.presentation.Dependability_ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Dependability_ModelFile.gif">
+         <description>%_UI_Dependability_ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.dependability.presentation.Dependability_EditorID"
+            name="%_UI_Dependability_Editor_label"
+            icon="icons/full/obj16/Dependability_ModelFile.gif"
+            extensions="dependability_"
+            class="ode.dependability.presentation.Dependability_Editor"
+            contributorClass="ode.dependability.presentation.Dependability_ActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated mergedODE -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="ode.architecture.presentation.ArchitectureModelWizardID"
+            name="%_UI_ArchitectureModelWizard_label"
+            class="ode.architecture.presentation.ArchitectureModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ArchitectureModelFile.gif">
+         <description>%_UI_ArchitectureModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated mergedODE -->
+      <editor
+            id="ode.architecture.presentation.ArchitectureEditorID"
+            name="%_UI_ArchitectureEditor_label"
+            icon="icons/full/obj16/ArchitectureModelFile.gif"
+            extensions="architecture"
+            class="ode.architecture.presentation.ArchitectureEditor"
+            contributorClass="ode.architecture.presentation.ArchitectureActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

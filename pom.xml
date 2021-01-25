@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>ode.concept.deis</groupId>
+	<artifactId>parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+    <name>ODE Meta-Model and Editor</name>
+
+	<modules>
+		<module>bundles/ode.concept.deis.meta-model</module>
+		<module>bundles/ode.concept.deis.edit</module>
+		<module>bundles/ode.concept.deis.editor</module>
+
+		<!-- Tests -->
+		<!--<module>tests/ode.concept.deis.tests</module>-->
+
+		<!-- Features -->
+		<module>features/ode.concept.deis.feature</module>
+
+		<!-- Releng -->
+		<module>releng/ode.concept.deis.target</module>
+		<module>releng/ode.concept.deis.p2</module>
+
+	</modules>
+
+	<properties>
+		<ode-version>1.0.0-SNAPSHOT</ode-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho-version>1.7.0</tycho-version>
+		<swt.version>4.6.1</swt.version>
+	</properties>
+
+
+	<profiles>
+		<profile>
+			<id>macosx-jvm-flags</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<os-jvm-flags>-XstartOnFirstThread</os-jvm-flags>
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<target>
+						<artifact>
+							<groupId>ode.concept.deis</groupId>
+							<artifactId>ode.concept.deis.target</artifactId>
+							<version>${ode-version}</version>
+						</artifact>
+					</target>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+
+			<!-- Only required if tests need UI -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+					<useUIThread>true</useUIThread>
+					<argLine>${os-jvm-flags}</argLine>
+					<dependencies>
+						<dependency>
+							<type>eclipse-plugin</type>
+							<artifactId>org.eclipse.equinox.event</artifactId>
+							<version>0.0.0</version>
+						</dependency>
+					</dependencies>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+</project>

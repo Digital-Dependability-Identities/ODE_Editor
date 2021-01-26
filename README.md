@@ -8,4 +8,4 @@ This repo uses the [MIT License](https://github.com/Digital-Dependability-Identi
 
 # Installation
 
-Use github pages https://digital-dependability-identities.github.io/ODE_Editor/ as the update site URL, in the Help > Install New Software… dialog of Eclipse.
+Use github pages [https://digital-dependability-identities.github.io/ODE_Editor/](https://digital-dependability-identities.github.io/ODE_Editor/) as the update site URL, in the Help > Install New Software... dialog of Eclipse.
